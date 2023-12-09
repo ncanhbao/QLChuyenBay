@@ -8,5 +8,16 @@
 
 <body>
 <h1 class="subject">Chào mừng bạn đến với website đặt vé máy bay !!!</h1>
+
+<ul>
+    <li>
+        <a href="/flight">Tất cả chuyến bay</a>
+    </li>
+    {% for c in catgories %}
+    <li>
+        <a href="">{{ c.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
 </body>
 </html>

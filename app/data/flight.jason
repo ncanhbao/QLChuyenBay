@@ -1,0 +1,51 @@
+[{
+  "id": 1,
+  "from": "TP HCM (SGN)",
+  "to": "Da Lat (DLI)",
+  "price": 928000,
+  "seat_class_1": 78,
+  "seat_class_2": 102,
+  "airline": "Vietjet Air",
+  "airline_logo": "images/vietjet.png",
+  "flight_type": 1
+}, {
+  "id": 2,
+  "from": "Da Nang (DAD)",
+  "to": "Phu Quoc (PQC)",
+  "price": 2078480,
+  "seat_class_1": 78,
+  "seat_class_2": 102,
+  "airline": "JetStar",
+  "airline_logo": "images/jetstar.png",
+  "flight_type": 1
+}, {
+  "id": 3,
+  "from": "TP HCM (SGN)",
+  "to": "Tokyo (TYOA)",
+  "price": 2962000,
+  "seat_class_1": 70,
+  "seat_class_2": 100,
+  "airline": "VietNam Airline",
+  "airline_logo": "images/vietnamairline.png",
+  "flight_type": 2
+}, {
+  "id": 4,
+  "from": "Quy Nhon (UIH)",
+  "to": "Seoul (ICN)",
+  "price": 5542000,
+  "seat_class_1": 70,
+  "seat_class_2": 100,
+  "airline": "VietNam Airline",
+  "airline_logo": "images/vietnamairline.png",
+  "flight_type": 2
+}, {
+  "id": 5,
+  "from": "Can Tho (VCA)",
+  "to": "Ha Noi (HAN)",
+  "price": 1200000,
+  "seat_class_1": 78,
+  "seat_class_2": 102,
+  "airline": "Vietjet Air",
+  "airline_logo": "images/vietjet.png",
+  "flight_type": 1
+}]

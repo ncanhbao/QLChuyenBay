@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách chuyến bay</title>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<h1 class="subject">DANH MỤC SẢN PHẨM</h1>
+<div class="container">
+    <table border="1" class="flight">
+        <tr>
+            <th></th>
+            <th>Ma chuyen bay</th>
+            <th>Noi di</th>
+            <th>Noi den</th>
+            <th>Gia ve</th>
+            <th>Ghe hang 1</th>
+            <th>Ghe hang 2</th>
+            <th>Hang bay</th>
+            <th>Loai chuyen bay</th>
+        </tr>
+        {% for p in products %}
+        <tr>
+            <td>
+                <img src="{{ url_for('static', filename=p.airline_logo) }}" width="120px">
+            </td>
+            <td>{{ p.id }}</td>
+            <td>{{ p.from }}</td>
+            <td>{{ p.to }}</td>
+            <td>{{ "{:,.1f}".format(p.price) }} VND</td>
+            <td>{{ p.seat_class_1 }}</td>
+            <td>{{ p.seat_class_2 }}</td>
+            <td>{{ p.airline }}</td>
+            <td>{{ p.flight_type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
