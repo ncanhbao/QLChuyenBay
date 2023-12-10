@@ -15,8 +15,12 @@ def load_flight(cate_id=None, fr=None, to=None):
         flights = [f for f in flights if f['flight_type'] == int(cate_id)]
 
     if fr and to:
-        flights = [f for f in flights if f['from'].lower().find(fr.lower()) >= 0
-                   and f['to'].lower().find(to.lower()) >= 0]
+        flights = [f for f in flights if
+                   f['from'].lower().find(fr.lower()) >= 0 and f['to'].lower().find(to.lower()) >= 0]
+    elif fr:
+        flights = [f for f in flights if f['from'].lower().find(fr.lower()) >= 0]
+    elif to:
+        flights = [f for f in flights if f['to'].lower().find(to.lower()) >= 0]
 
     return flights
 
@@ -25,5 +29,3 @@ def get_flight_by_id(flight_id=None):
     for f in flights:
         if f['id'] == flight_id:
             return f
-
-    return None

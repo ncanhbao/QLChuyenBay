@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Trang chủ</title>
     <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
 </head>
 
 <body>
-<h1 class="subject">Chào mừng bạn đến với website đặt vé máy bay !!!</h1>
+<div>
+    <a href="/">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" style="width: 100px;height: 100px;">
+    </a>
 
 <ul>
     <li>
@@ -19,5 +23,6 @@
     </li>
     {% endfor %}
 </ul>
+    </div>
 </body>
 </html>
