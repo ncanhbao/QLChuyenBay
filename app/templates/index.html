@@ -11,11 +11,11 @@
 
 <ul>
     <li>
-        <a href="/flight">Tất cả chuyến bay</a>
+        <a href="{{ url_for('flight_list') }}">Tất cả chuyến bay</a>
     </li>
     {% for c in catgories %}
     <li>
-        <a href="">{{ c.name }}</a>
+        <a href="{{ url_for('flight_list', flight_type=c.id) }}">{{ c.name }}</a>
     </li>
     {% endfor %}
 </ul>

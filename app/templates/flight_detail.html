@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiet chuyen bay</title>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<h1 class="subject">CHI TIET CHUYEN BAY</h1>
+<div class="container flex">
+<div>
+    <img src="{{ url_for('static', filename=flight.airline_logo) }}" style="width: 500px">
+</div>
+    <div>
+        <h2>Chuyen bay tu {{flight.from}} den {{flight.from}}</h2>
+        <p>So ghe hang 1: {{flight.seat_class_1}}<br>
+            So ghe hang 2: {{flight.seat_class_2}}
+        </p>
+        <h4>Gia ve: {{ "{:,.1f}".format(flight.price) }}</h4>
+    </div>
+</div>
+
+</body>
+</html>

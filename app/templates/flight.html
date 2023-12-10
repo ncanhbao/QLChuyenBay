@@ -7,8 +7,16 @@
 
 </head>
 <body>
-<h1 class="subject">DANH MỤC SẢN PHẨM</h1>
 <div class="container">
+    <h1 class="subject">DANH SÁCH CHUYẾN BAY</h1>
+
+    <hr>
+    <form>
+        <input type="text" name="from" placeholder="Diem bat dau..."/>
+        <input type="text" name="to" placeholder="Diem den..."/>
+        <input type="submit" value="Tim kiem"/>
+    </form>
+    <hr>
     <table border="1" class="flight">
         <tr>
             <th></th>
@@ -21,19 +29,21 @@
             <th>Hang bay</th>
             <th>Loai chuyen bay</th>
         </tr>
-        {% for p in products %}
+        {% for f in flights %}
         <tr>
             <td>
-                <img src="{{ url_for('static', filename=p.airline_logo) }}" width="120px">
+                <a href="{{ url_for('flight_detail', flight_id=f.id) }}">
+                    <img src="{{ url_for('static', filename=f.airline_logo) }}" width="120px">
+                </a>
             </td>
-            <td>{{ p.id }}</td>
-            <td>{{ p.from }}</td>
-            <td>{{ p.to }}</td>
-            <td>{{ "{:,.1f}".format(p.price) }} VND</td>
-            <td>{{ p.seat_class_1 }}</td>
-            <td>{{ p.seat_class_2 }}</td>
-            <td>{{ p.airline }}</td>
-            <td>{{ p.flight_type }}</td>
+            <td>{{ f.id }}</td>
+            <td>{{ f.from }}</td>
+            <td>{{ f.to }}</td>
+            <td>{{ "{:,.1f}".format(f.price) }} VND</td>
+            <td>{{ f.seat_class_1 }}</td>
+            <td>{{ f.seat_class_2 }}</td>
+            <td>{{ f.airline }}</td>
+            <td>{{ f.flight_type }}</td>
         </tr>
         {% endfor %}
     </table>
